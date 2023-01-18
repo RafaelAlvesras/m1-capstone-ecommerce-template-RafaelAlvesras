@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    display: flex;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-wrap:nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 10px;
+    width: 100%;
+    height: 160px;
+    background-color: rgb(70, 187, 255);
+    border-bottom: 1.5px solid rgb(47, 41, 154);
+    border-radius: 3px;
+}
+
+.container2 {
+    display: flex;
+    max-width: 1200px;
+}
+
+.title {
+    display: flex;
+    min-width: 350px;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(47, 41, 154);
+    font-size: 40px;
+    font-weight: bolder;
+
+}
+
+.logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.navButton {
+    width: 90px;
+    height: 35px;
+    background-color: rgb(47, 41, 154);
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.navButton:hover {
+    width: 90px;
+    height: 35px;
+    background-color: white;
+    color: rgb(47, 41, 154);
+    border: 2px solid rgb(47, 41, 154);
+    border-radius: 10px;
+}
+
+.searchButton{
+    color: rgb(47,41,154);
+    background-color: white;
+    border-radius: 10px;
+    height: 25px;
+}
+
+.ulVitrine{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    height: 60%;
+    border: 8px solid white;
+    border-radius: 25px;
+    background-color: rgb(47, 41, 154);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+img {
+    height: 90px;
+    width: 90px;
+    border-radius: 20%;
+    border: 1.5px solid black;
+}
+
+main>section>ul {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    margin: 10px;
+    border: 1px solid black;
+    height: 290px;
+    width: 150px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+li:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid transparent;
+    height: 290px;
+    width: 150px;
+    background-color: rgb(47, 41, 154);
+    border-radius: 25px;
+    box-shadow: 2px 3px 10px 0px rgb(175, 171, 171);
+    color: white;
+}
+
+h2 {
+    font-size: 12px;
+}
+
+p {
+    font-size: 12px;
+    line-height: 10px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+.buttonAdd {
+    display: flex;
+    height: 25px;
+    width: 75px;
+    font-size: 9px;
+    color: white;
+    background-color: rgb(121, 115, 216);
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+.buttonAdd:hover {
+    display: flex;
+    height: 25px;
+    width: 75px;
+    font-size: 9px;
+    color: rgb(47, 41, 154);
+    background-color: white;
+    border: 1px solid rgb(47, 41, 154);
+    border-radius: 12px;
+}
+
+#search {
+    height: 25px;
+    width: 150px;
+    border-radius: 12px;
+    border: 1px solid rgb(222, 222, 222);
+}
+
+.divCarrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrinhoList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px;
+    margin: 10px;
+    border: 1px solid black;
+    height: 350px;
+    width: 220px;
+    background-color: white;
+    border-radius: 25px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.carrinho {
+    padding: 0;
+}
