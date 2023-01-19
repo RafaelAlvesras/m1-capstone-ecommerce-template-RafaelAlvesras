@@ -113,7 +113,7 @@ function renderProducts() {
             valorDoProduto.classList.add("valorCarr")
             listaDeProduto.appendChild(valorDoProduto)
             valorTotal += products[i].preco
-            document.querySelector(".somaFinal").innerHTML = valorTotal
+            document.querySelector(".somaFinal").innerHTML = valorTotal.toFixed(2)
             const delButton = document.createElement("button")
             listaDeProduto.appendChild(delButton)
             delButton.innerText = "remover item"
