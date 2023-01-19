@@ -3,62 +3,71 @@ let products = [
         imagem: "./assets/img/amaciante conforto.png",
         nome: "Amaciante Conforto",
         descricao: "Amaciante conforto é indicado para lavagem de tecidos ou roupas, mantendo as roupas de sua família macias.",
-        preco: 7.99
+        preco: 7.99,
+        type: "roupas"
     },
     {
         imagem: "./assets/img/amaciante carinho.png",
         nome: "Amaciante Carinho",
         descricao: "Amaciante conforto é indicado para lavagem de tecidos ou roupas brancas e coloridos mantendo as roupas de sua família macias.",
-        preco: 7.99
-
+        preco: 7.99,
+        type: "roupas"
     },
     {
         imagem: "./assets/img/alvejante.png",
         nome: "Alvejante",
         descricao: "Alvejante sem Cloro  é indicado para roupas brancas ou coloridas pois não contém cloro.",
-        preco: 10.99
+        preco: 10.99,
+        type: "roupas"
     },
     {
         imagem: "./assets/img/clareador de pisos.png",
         nome: "Clareador de Pisos",
         descricao: "Clareador de pisos é um produto que veio pra trazer praticidade e segurança na desincrustação de pisos e azulejos.",
-        preco: 22.00
+        preco: 22.00,
+        type: "piso"
     },
     {
         imagem: "./assets/img/lava roupas ação profunda.png",
         nome: "Lava Roupas Ação Profunda",
         descricao: "Lava roupas ação profunda é indicado para lavagem simples ou  pesada de roupas.",
-        preco: 13.99
+        preco: 13.99,
+        type: "roupas"
     },
     {
         imagem: "./assets/img/lava roupas de côco.png",
         nome: "Lava Roupas de Côco",
         descricao: "Lava roupas côco, oferece o máximo cuidado com as roupas para as peles delicadas.",
-        preco: 13.99
+        preco: 13.99,
+        type: "roupas"
     },
     {
         imagem: "./assets/img/lava louças neutro.png",
         nome: "Lava Louças Neutro",
         descricao: "Produto indicado para lavagem de louças, copos, talheres e utensílios domésticos.",
-        preco: 8.99
+        preco: 8.99,
+        type: "cozinha"
     },
     {
         imagem: "./assets/img/limpador de aluminios.png",
         nome: "Limpador de Alumínios",
         descricao: "Produto indicado para limpeza de utensílios de alumínio em geral.",
-        preco: 13.99
+        preco: 13.99,
+        type: "cozinha"
     },
     {
         imagem: "./assets/img/multiuso.png",
         nome: "Multiuso",
         descricao: "Produto indicado para limpeza geral em pisos, azulejos, banheiros, cozinhas, móveis, utensílios domésticos, eletrodomésticos etc.",
-        preco: 10.99
+        preco: 10.99,
+        type: "cozinha"
     },
     {
         imagem: "./assets/img/pinho gel.png",
         nome: "Pinho Gel",
         descricao: "Limpa Pisos Pinho Gel, Possuí força máxima na limpeza de pisos e azulejos e qualquer superfície lavável em qualquer parte da casa.",
-        preco: 12.99
+        preco: 12.99,
+        type: "piso"
     }
 ]
 
@@ -92,16 +101,42 @@ function renderProducts() {
             divCar.appendChild(listaDeProduto)
             const productName = document.createElement("p")
             listaDeProduto.appendChild(productName)
-            productName.innerText = products[i].nome            
+            listaDeProduto.classList.add("listCard")
+            productName.innerText = products[i].nome
             const valorDoProduto = document.createElement("p")
-            valorDoProduto.innerText = products[i].preco
+            valorDoProduto.innerText = products[i].preco.toFixed(2)
             listaDeProduto.appendChild(valorDoProduto)
+            const delButton = document.createElement("button")
+            listaDeProduto.appendChild(delButton)
+            delButton.innerText = "remover item"
+            delButton.classList.add("delButton")
         })
     }
-
 }
 
 renderProducts()
+
+function somaCompra(){
+    let soma = 0 
+    for(let i = 0; i < divCar.length; i++){
+        soma += divCar[i].valorDoProduto
+    }
+
+    let total = document.createElement("h4")
+    ulCar.appendChild(total)
+    total.innerText = "total" + "" + "" + soma
+
+}
+somaCompra()
+
+/*<div class="soma">
+                                <h3 id="soma">total</h3>
+                            </div>*/
+
+
+
+
+
 
 
 
