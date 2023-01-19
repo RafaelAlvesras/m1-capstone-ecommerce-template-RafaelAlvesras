@@ -100,7 +100,7 @@ function renderProducts() {
         buttonAdd.classList.add("buttonAdd")
         buttonAdd.addEventListener("click", function () {
             contItens++
-            document.querySelector(".quantidade").innerText = contItens
+            document.querySelector(".contadorItens").innerText = contItens
             const listaDeProduto = document.createElement("li")
             divCar.appendChild(listaDeProduto)
             const productName = document.createElement("p")
@@ -112,14 +112,19 @@ function renderProducts() {
             valorDoProduto.innerText = products[i].preco.toFixed(2)
             valorDoProduto.classList.add("valorCarr")
             listaDeProduto.appendChild(valorDoProduto)
+            valorTotal += products[i].preco
+            document.querySelector(".somaFinal").innerHTML = valorTotal
             const delButton = document.createElement("button")
             listaDeProduto.appendChild(delButton)
             delButton.innerText = "remover item"
             delButton.classList.add("delButton")
             delButton.addEventListener("click", function () {
                 contItens -- 
-                document.querySelector(".quantidade").innerText = contItens
+                document.querySelector(".contadorItens").innerText = contItens
                 listaDeProduto.remove()
+                valorTotal -= products[i].preco
+            document.querySelector(".somaFinal").innerHTML = valorTotal
+ 
             })
         })
     }
