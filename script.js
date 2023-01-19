@@ -9,7 +9,7 @@ let products = [
     {
         imagem: "./assets/img/amaciante carinho.png",
         nome: "Amaciante Carinho",
-        descricao: "Amaciante conforto é indicado para lavagem de tecidos ou roupas brancas e coloridos mantendo as roupas de sua família macias.",
+        descricao: "Amaciante conforto é indicado para lavagem de tecidos ou roupas, mantendo as roupas de sua família macias.",
         preco: 7.99,
         type: "roupas"
     },
@@ -23,7 +23,7 @@ let products = [
     {
         imagem: "./assets/img/clareador de pisos.png",
         nome: "Clareador de Pisos",
-        descricao: "Clareador de pisos é um produto que veio pra trazer praticidade e segurança na desincrustação de pisos e azulejos.",
+        descricao: "Clareador de pisos é um produto que veio pra trazer praticidade e segurança na limpeza de pisos.",
         preco: 22.00,
         type: "piso"
     },
@@ -58,14 +58,14 @@ let products = [
     {
         imagem: "./assets/img/multiuso.png",
         nome: "Multiuso",
-        descricao: "Produto indicado para limpeza geral em pisos, azulejos, banheiros, cozinhas, móveis, utensílios domésticos, eletrodomésticos etc.",
+        descricao: "Produto indicado para limpeza geral em pisos, cozinhas, móveis, utensílios, eletrodomésticos etc.",
         preco: 10.99,
         type: "cozinha"
     },
     {
         imagem: "./assets/img/pinho gel.png",
         nome: "Pinho Gel",
-        descricao: "Limpa Pisos Pinho Gel, Possuí força máxima na limpeza de pisos e azulejos e qualquer superfície lavável em qualquer parte da casa.",
+        descricao: "Limpa Pisos Pinho Gel, força máxima na limpeza de pisos em qualquer parte da casa.",
         preco: 12.99,
         type: "piso"
     }
