@@ -119,12 +119,12 @@ function renderProducts() {
             delButton.innerText = "remover item"
             delButton.classList.add("delButton")
             delButton.addEventListener("click", function () {
-                contItens -- 
+                contItens--
                 document.querySelector(".contadorItens").innerText = contItens
                 listaDeProduto.remove()
                 valorTotal -= products[i].preco
-            document.querySelector(".somaFinal").innerHTML = valorTotal
- 
+                document.querySelector(".somaFinal").innerHTML = valorTotal.toFixed(2)
+
             })
         })
     }
