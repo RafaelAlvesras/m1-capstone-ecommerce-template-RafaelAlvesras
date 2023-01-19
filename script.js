@@ -74,6 +74,8 @@ let products = [
 let vitrine = document.querySelector("ul")
 const ulCar = document.querySelector(".divCarrinho")
 const divCar = document.querySelector(".carrinhoList")
+let contItens = 0
+let valorTotal = 0
 
 function renderProducts() {
     for (let i = 0; i < products.length; i++) {
@@ -97,41 +99,37 @@ function renderProducts() {
         buttonAdd.innerText = "Adicionar ao Carrinho"
         buttonAdd.classList.add("buttonAdd")
         buttonAdd.addEventListener("click", function () {
+            contItens++
+            document.querySelector(".quantidade").innerText = contItens
             const listaDeProduto = document.createElement("li")
             divCar.appendChild(listaDeProduto)
             const productName = document.createElement("p")
             listaDeProduto.appendChild(productName)
             listaDeProduto.classList.add("listCard")
             productName.innerText = products[i].nome
+            productName.classList.add("nomeCarr")
             const valorDoProduto = document.createElement("p")
             valorDoProduto.innerText = products[i].preco.toFixed(2)
+            valorDoProduto.classList.add("valorCarr")
             listaDeProduto.appendChild(valorDoProduto)
             const delButton = document.createElement("button")
             listaDeProduto.appendChild(delButton)
             delButton.innerText = "remover item"
             delButton.classList.add("delButton")
+            delButton.addEventListener("click", function () {
+                contItens -- 
+                document.querySelector(".quantidade").innerText = contItens
+                listaDeProduto.remove()
+            })
         })
     }
 }
 
 renderProducts()
 
-function somaCompra(){
-    let soma = 0 
-    for(let i = 0; i < divCar.length; i++){
-        soma += divCar[i].valorDoProduto
-    }
 
-    let total = document.createElement("h4")
-    ulCar.appendChild(total)
-    total.innerText = "total" + "" + "" + soma
 
-}
-somaCompra()
 
-/*<div class="soma">
-                                <h3 id="soma">total</h3>
-                            </div>*/
 
 
 
